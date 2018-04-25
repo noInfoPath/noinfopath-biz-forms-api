@@ -1,0 +1,46 @@
+{
+	"debug": {
+		"namespaces": {
+			"app": {
+				"schema": {
+					"config": {
+						"entityName": "config",
+						"primaryKey": "id"
+					},
+					"schemas": {
+						"entityName": "schemas",
+						"primaryKey": "id"
+					}
+				},
+				"rest": {
+					"protocol": "http://",
+					"host": "restapi.sop.hsl.test",
+					"port": 8080,
+					"apiPrefix": "/app/"
+				}
+			}
+		}
+	},
+	"prod": {
+		"namespaces": {
+			"app": {
+				"schema": {
+					"config": {
+						"entityName": "config",
+						"primaryKey": "id"
+					},
+					"schemas": {
+						"entityName": "schemas",
+						"primaryKey": "id"
+					}
+				},
+				"rest": {
+					"protocol": "https://",
+					"host": "restapi.sop.heavensentlegal.com",
+					"port": 443,
+					"apiPrefix": "/app/"
+				}
+			}
+		}
+	}
+}

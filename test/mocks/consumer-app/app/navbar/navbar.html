@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Auth0 - AngularJS</a>
+
+      <button
+        class="btn btn-primary btn-margin"
+        ui-sref="home">
+          Home
+      </button>
+
+      <button
+        id="qsLoginBtn"
+        class="btn btn-primary btn-margin"
+        ng-if="!vm.auth.isAuthenticated()"
+        ng-click="vm.auth.login()">
+          Log In
+      </button>
+
+      <button
+        id="qsLogoutBtn"
+        class="btn btn-primary btn-margin"
+        ng-if="vm.auth.isAuthenticated()"
+        ng-click="vm.auth.logout()">
+          Log Out
+      </button>
+
+
+	  <button
+        id="hdocsHome"
+        class="btn btn-primary btn-margin"
+        ng-if="vm.auth.isAuthenticated()"
+        ui-sref="hdocs">
+          NoInfoPath Biz Forms
+      </button>
+
+	  <button
+		  id="hdocsHome"
+		  class="btn btn-primary btn-margin"
+		  ng-if="vm.auth.isAuthenticated()"
+		  ui-sref="tests">
+			HDOCS Tests
+		</button>
+
+    </div>
+  </div>
+</nav>

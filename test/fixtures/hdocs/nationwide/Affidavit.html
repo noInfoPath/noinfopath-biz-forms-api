@@ -1,0 +1,230 @@
+<div>
+    <div class="hsl_doc">
+        <div class="page">
+            <div class="editable text_center break_small" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="0">
+                <h3>
+        <strong>AFFIDAVIT OF SERVICE</strong>
+      </h3>
+            </div>
+            <table class="table_border break_small">
+                <tbody>
+                    <tr>
+                        <td>
+                            <strong>Case:</strong>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="1">{{case.case_no}}</div>
+                        </td>
+                        <td>
+                            <strong>Court:</strong>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="2">{{court.name}}</div>
+                        </td>
+                        <td>
+                            <strong>County:</strong>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="3">{{court.county}}, {{court.state}}</div>
+                        </td>
+                        <td>
+                            <strong>Job:</strong>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="4">{{ order.order_number }}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" width="50%">
+                            <strong>Plaintiff / Petitioner:</strong> {{#each casePeople.plaintiffs}}
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="5">{{ name1 }} {{ name2 }}</div>
+                            {{/each}}
+                        </td>
+                        <td colspan="2">
+                            <strong>Defendant / Respondent:</strong> {{#each casePeople.defendants}}
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="6">{{ name1 }} {{ name2 }}</div>
+                            {{/each}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <strong>Received by:</strong>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="7">{{ server.company.name }}</div>
+                        </td>
+                        <td colspan="2">
+                            <strong>For:</strong>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="8">{{ requester.company.name }}</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <strong>To be served upon:</strong>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="9">{{ personServed.name1 }} {{ personServed.name2 }}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="break_small">
+                <div class="editable data spec-declaration" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="10">
+                    <p>I, {{server.first_name}} {{server.last_name}}, being duly sworn, depose and say: I am over the age of 18 years and not a party to this action, and that within the boundaries of the state where service was effected, I was authorized by law to make
+                        service of the documents and informed said person of the contents herein</p>
+                </div>
+            </div>
+            <table class="table_padding break_small">
+                <tbody>
+                    <tr>
+                        <td class="cell_collapse">
+                            <strong>Recipient Name / Address:</strong>
+                        </td>
+                        <td>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="11">
+                                {{ personServed.name1 }} {{ personServed.name2 }}, {{ personServed.address1 }} {{ personServed.address2 }} {{ personServed.city }}, {{ personServed.state }} {{ personServed.zip }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell_collapse">
+                            <strong>Manner of Service:</strong>
+                        </td>
+                        <td>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="12">
+                                {{ latestAttempt.type }} {{ latestAttempt.timestamp }}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cell_collapse">
+                            <strong>Documents:</strong>
+                        </td>
+                        <td>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="13">
+                                <p>
+                                    {{#each documents}}
+                                        {{ subpoena_title }},
+                                    {{/each}}
+                                    (Received {{ case.message_date }})
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <strong>Additional Comments:</strong>
+            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="14">
+                <ol>
+                    {{#each attempts}}
+                    <li>{{ success }} Attempt: {{ timestamp }} at {{ type }} {{ address1 }} {{ address2 }}, {{ city }}, {{ state }} {{ zip }}</br>{{ notes }}<br></li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            <table class="table_padding_right hidden-until-edit">
+                <tbody>
+                    <tr>
+                        <td class="cell_collapse">
+                            <input type="checkbox" name="toggle_fees" id="toggle_fees" no-toggle-div-target=".js_fees">
+                            <label for="toggle_fees">Include Fees?</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width: 48%; display:none;" class="js_fees table_padding">
+                <tbody>
+                    <tr>
+                        <td class="cell_collapse"><strong>Fees:</strong></td>
+                        <td>
+                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="15">
+                                Please enter fee amount here.
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table_padding">
+                <tbody>
+                    <tr>
+                        <td width="48%">
+                            <table class="table_padding">
+                                <tbody>
+                                    <tr>
+                                        <td class="cell_underline align_bottom digital_signature_container">
+                                            <div class="js-digital-signature hidden-until-edit"><a class="btn btn-sm btn-link" no-sign>Sign &amp; Save</a></div>
+                                        </td>
+                                        <td class="cell_underline align_bottom">
+                                            <span class="js-digital-signature-date editable data_inline" date-format="%m/%d/%Y" data-disable-return="true" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="16"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="editable data break_small" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="17">
+                                                {{ server.first_name }} {{ server.last_name }}
+                                            </div>
+                                        </td>
+                                        <td width="33%">
+                                            <strong>Date</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font_small" colspan="2">
+                                            <div class="editable data" contenteditable="true" spellcheck="true" data-medium-editor-element="true" role="textbox" aria-multiline="true" medium-editor-index="18">
+                                                <p>
+                                                    {{ server.company.name }}</br>
+                                                    {{ server.company.address1 }}</br>
+                                                    {{ server.company.address2 }}</br>
+                                                    {{ server.company.city }}, {{ server.company.state }} {{ server.company.zip }}</br>
+                                                    {{ server.company.phone }}
+                                                </p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td width="4%">&nbsp;</td>
+                        <td width="48%">
+                            <table class="table_padding_right hidden-until-edit" style="display: table;">
+                                <tbody>
+                                    <tr>
+                                        <td class="cell_collapse">
+                                            <input type="checkbox" name="toggle_notary" id="toggle_notary" no-toggle-div-target=".js-notary" checked="checked">
+                                            <label for="toggle_notary">Display Notary Block?</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="table_padding js-notary" style="">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2">
+                                            <div class="break_small">
+                                                <em class="font_small">
+                                                    Subscribed and sworn to before me by the affiant who is
+                                                    <br>personally known to me.
+                                                  </em>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell_underline" colspan="2">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <strong>Notary Public</strong>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="cell_underline">&nbsp;</td>
+                                        <td class="cell_underline"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="33%">
+                                            <strong>Date</strong>
+                                        </td>
+                                        <td>
+                                            <strong>Commission Expires</strong>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

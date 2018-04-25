@@ -1,0 +1,10 @@
+{
+	"host": "104.196.44.67",
+	"user": "hsl-sop-restapi",
+	"password": "3af41db4c1ce122b6221387f6aace8c7d2a22912",
+	"database": "HSLSOPDB_V1",
+	"timezone": "UTC",
+	"dateStrings": false,
+	"connectTimeout": 100000,
+	"debug": false
+}

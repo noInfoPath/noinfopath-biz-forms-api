@@ -1,0 +1,127 @@
+<div>
+	<div class="no-flex vertical no-flex-item size-1" ng-controller="documentController">
+		<form id="hdocForm" name="form" method="POST" action="/document">
+			<input type="hidden" name="html" value="" />
+			<input type="hidden" name="sop_case_id" value="{{sop_case_id}}" />
+			<input type="hidden" name="sop_order_id" value="{{sop_order_id}}" />
+			<input type="hidden" name="sop_service_id" value="{{sop_service_id}}" />
+			<input type="hidden" name="title" value="{{title}}" />
+			<input type="hidden" name="sop_document_template_id" value="{{sop_document_template_id}}" />
+			<input type="hidden" name="id" value="{{id}}" />
+		</form>
+		<div class="no-flex vertical no-flex-item size-1">
+			<div class="no-flex horizontal no-flex-item size-0 instruction-header flex-center">
+				<div class="aff-viewer-ctrl-container no-flex horizontal no-flex-item size-0 flex-between">
+					<div class="no-flex horizontal no-flex-item size-0 flex-middle">
+						<label class="no-p-t-md no-p-r-md no-flex-item size-0">Choose an Affidavit Type:
+					</label>
+						<select hdocs-dropdown id="dd_affidavit" class="form-control no-flex-item size-1 no-m-r-lg" {{disableHdocDD}}></select>
+					</div>
+					<div style="min-width:32em" affidavit-title class="no-flex-item size-0">
+						<div class="no-flex no-flex-item size-1 horizontal flex-middle">
+							<label class="no-m-l-md no-p-t-md no-p-r-sm no-flex-item size-0">Affidavit Title:</label>
+							<control class="no-flex-item size-1">
+								<p class="no-p-t-lg no-p-l-md">{{title}}</p>
+							</control>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="no-flex no-flex-item size-1 viewer-wrapper">
+				<affidavit-viewer></affidavit-viewer>
+			</div>
+			<!--START NAVBARS-->
+			<div ng-hide="viewMode" class="affidavit-navbar no-flex no-flex-item size-0 horizontal no-b-t-sm no-p-a-md justify-between flex-center">
+				<div class="no-flex no-flex-item size-0 horizontal flex-between aff-viewer-ctrl-container">
+					<div class="no-flex no-flex-item size-0">
+						<a class="btn btn-link" ng-click="hdocApi.cancelEdit()" ng-show="!advEditShow">
+						<i class="fa fa-close no-p-r-sm" aria-hidden="true"></i>Cancel</a>
+						<div>
+							<advanced-edit-button></advanced-edit-button>
+						</div>
+					</div>
+
+					<div class="no-flex">
+						<div class="">
+							<a class="btn btn-success" ng-click="hdocApi.submit()">
+							<i class="fa fa-floppy-o no-p-r-sm" aria-hidden="true"></i>Save</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ng-cloak ng-show="viewMode" class="affidavit-navbar no-flex no-flex-item size-0 horizontal no-b-t-sm no-p-a-md justify-between flex-center">
+				<div class="no-flex no-flex-item size-0 horizontal flex-between aff-viewer-ctrl-container">
+					<div>
+						<div class="">
+							<a class="btn btn-link" ng-click="hdocApi.closeWindow()">
+							<i class="fa fa-close no-p-r-sm" aria-hidden="true"></i>Close
+						</a>
+						</div>
+					</div>
+					<div class="no-flex no-flex-item size-0">
+						<a class="btn btn-link" ng-click="hdocApi.toggleEdit()">
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit
+					</a>
+						<a class="btn btn-link" ng-click="hdocApi.print()">
+							<!--{{id}}-->
+							<i class="fa fa-print" aria-hidden="true"></i>Print
+						</a>
+						<a class="btn btn-link" data-toggle="modal" data-target="#myModal">
+						<i class="fa fa-share-square-o" aria-hidden="true"></i>Share
+					</a>
+					</div>
+				</div>
+			</div>
+			<!--END NAVBARS -->
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+					<h4 class="modal-title" id="myModalLabel">Share</h4>
+				</div>
+				<div class="modal-body">
+					<h4>Email to</h4>
+					<div class="no-flex">
+						<div class="no-flex-item size-1">
+							<p>Client Email:</p>
+							<p>{{ requester.first_name }} {{ requester.last_name }} : {{ requester.email }}</p>
+						</div>
+						<div class="no-flex-item size-1">
+							<p>My Company</p>
+						</div>
+					</div>
+					<h4>Message</h4>
+					<textarea class="form-control"></textarea>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="loader" class="loader">
+		<div>Loading</div>
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+	<div id="saver" class="loader" style="display:none;">
+		<div>Saving</div>
+		<div class="spinner">
+			<div class="bounce1"></div>
+			<div class="bounce2"></div>
+			<div class="bounce3"></div>
+		</div>
+	</div>
+
+</div>

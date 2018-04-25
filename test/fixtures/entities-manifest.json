@@ -1,0 +1,541 @@
+[{
+		"schemaName": "address",
+		"uri": "/sop/address",
+		"entityName": "hsl_addresses"
+	},
+	{
+		"schemaName": "address_documents",
+		"uri": "/sop/address_documents",
+		"entityName": "vw_documents_for_addresses"
+	},
+	{
+		"schemaName": "address_person",
+		"uri": "/sop/address/person",
+		"entityName": "sop_people"
+	},
+	{
+		"schemaName": "address_validate",
+		"uri": "/sop/address/validate",
+		"entityName": "hsl_addresses"
+	},
+	{
+		"schemaName": "addresses",
+		"uri": "/sop/addresses",
+		"entityName": "hsl_addresses"
+	},
+	{
+		"schemaName": "affidavits",
+		"uri": "/sop/affidavits",
+		"entityName": "vw_affidavits"
+	},
+	{
+		"schemaName": "assignee_status_types",
+		"uri": "/sop/assignee_status_types",
+		"entityName": "sop_service_assignment_status_types"
+	},
+	{
+		"schemaName": "assignees",
+		"uri": "/sop/assignees",
+		"entityName": "vw_assignees"
+	},
+	{
+		"schemaName": "assignment",
+		"uri": "/sop/assignment",
+		"entityName": "sop_service_assignments"
+	},
+	{
+		"schemaName": "assignment_service",
+		"uri": "/sop/assignment/service",
+		"entityName": "sop_assignment_services"
+	},
+	{
+		"schemaName": "assignment_status_types",
+		"uri": "/sop/assignment_status_types",
+		"entityName": "sop_assignment_status_types"
+	},
+	{
+		"schemaName": "assignment_summary",
+		"uri": "/sop/assignment_summary",
+		"entityName": "vw_assignments"
+	},
+	{
+		"schemaName": "assignments",
+		"uri": "/sop/assignments",
+		"entityName": "vw_assignments"
+	},
+	{
+		"schemaName": "auth0_ticket_email",
+		"uri": "/app/auth0/ticket/email",
+		"entityName": "hsl_users"
+	},
+	{
+		"schemaName": "auth0_ticket_password",
+		"uri": "/app/auth0/ticket/password",
+		"entityName": "hsl_users"
+	},
+	{
+		"schemaName": "auth0_user_create",
+		"uri": "/app/auth0/user/create",
+		"entityName": "hsl_users"
+	},
+	{
+		"schemaName": "auth0_user_password_change",
+		"uri": "/app/auth0/user/password/change",
+		"entityName": "hsl_users"
+	},
+	{
+		"schemaName": "auth0_user_read",
+		"uri": "/app/auth0/user/read",
+		"entityName": "hsl_users"
+	},
+	{
+		"schemaName": "case",
+		"uri": "/sop/case",
+		"entityName": "sop_cases"
+	},
+	{
+		"schemaName": "case_documents",
+		"uri": "/sop/case/documents",
+		"entityName": "vw_case_documents"
+	},
+	{
+		"schemaName": "case_job",
+		"uri": "/sop/case/job",
+		"entityName": "sop_service_orders"
+	},
+	{
+		"schemaName": "case_job_count",
+		"uri": "/sop/case/job/count",
+		"entityName": "vw_case_job_count"
+	},
+	{
+		"schemaName": "case_jobs",
+		"uri": "/sop/case/jobs",
+		"entityName": "vw_sop_case_jobs"
+	},
+	{
+		"schemaName": "case_people",
+		"uri": "/sop/case/people",
+		"entityName": "vw_case_people"
+	},
+	{
+		"schemaName": "case_person",
+		"uri": "/sop/case/person",
+		"entityName": "j_case_people"
+	},
+	{
+		"schemaName": "case_person_document",
+		"uri": "/sop/case/person/document",
+		"entityName": "j_case_person_request_documents"
+	},
+	{
+		"schemaName": "case_summary",
+		"uri": "/sop/case/summary",
+		"entityName": "vw_case_ui_summary"
+	},
+	{
+		"schemaName": "cases",
+		"uri": "/sop/cases",
+		"entityName": "vw_sop_cases"
+	},
+	{
+		"schemaName": "clients",
+		"uri": "/sop/clients",
+		"entityName": "vw_clients"
+	},
+	{
+		"schemaName": "companies",
+		"uri": "/sop/companies",
+		"entityName": "sop_companies"
+	},
+	{
+		"schemaName": "companiesInRange",
+		"uri": "/sop/companiesInRange",
+		"entityName": "sop_companies"
+	},
+	{
+		"schemaName": "company",
+		"uri": "/sop/company",
+		"entityName": "vw_company_lu"
+	},
+	{
+		"schemaName": "company_addresses",
+		"uri": "/sop/company_addresses",
+		"entityName": "sop_company_addresses"
+	},
+	{
+		"schemaName": "company_contact_lu",
+		"uri": "/sop/company/contact/lu",
+		"entityName": "vw_company_contacts"
+	},
+	{
+		"schemaName": "company_contacts",
+		"uri": "/sop/company_contacts",
+		"entityName": "sop_company_contacts"
+	},
+	{
+		"schemaName": "company_email_addresses",
+		"uri": "/sop/company_email_addresses",
+		"entityName": "sop_company_email_addresses"
+	},
+	{
+		"schemaName": "company_phone_numbers",
+		"uri": "/sop/company_phone_numbers",
+		"entityName": "sop_company_phone_numbers"
+	},
+	{
+		"schemaName": "company_primary",
+		"uri": "/sop/company/primary",
+		"entityName": "vw_company_primary"
+	},
+	{
+		"schemaName": "company_types",
+		"uri": "/sop/company_types",
+		"entityName": "sop_company_types"
+	},
+	{
+		"schemaName": "config",
+		"uri": "/app/config",
+		"entityName": "config"
+	},
+	{
+		"schemaName": "court_address",
+		"uri": "/sop/court/address",
+		"entityName": "j_court_addresses"
+	},
+	{
+		"schemaName": "court_lu",
+		"uri": "/sop/court_lu",
+		"entityName": "vw_court_lookup"
+	},
+	{
+		"schemaName": "courts",
+		"uri": "/sop/courts",
+		"entityName": "sop_courts"
+	},
+	{
+		"schemaName": "dbschema",
+		"uri": "/app/dbschema",
+		"entityName": "noinfopath_dbschema"
+	},
+	{
+		"schemaName": "document_templates",
+		"uri": "/sop/document_templates",
+		"entityName": "sop_document_templates"
+	},
+	{
+		"schemaName": "document_upload",
+		"uri": "/app/document/upload",
+		"entityName": "sop_request_documents"
+	},
+	{
+		"schemaName": "documents",
+		"uri": "/sop/documents",
+		"entityName": "vw_request_documents"
+	},
+	{
+		"schemaName": "email_new_assignment",
+		"uri": "/sop/email_new_assignment",
+		"entityName": "vw_assignments"
+	},
+	{
+		"schemaName": "email_overdue_assignments",
+		"uri": "/sop/email_overdue_assignments",
+		"entityName": "vw_email_overdue_assignments"
+	},
+	{
+		"schemaName": "email_status_update",
+		"uri": "/sop/email_status_update",
+		"entityName": "vw_email_status_update"
+	},
+	{
+		"schemaName": "employees",
+		"uri": "/sop/employees",
+		"entityName": "vw_hsl_employees"
+	},
+	{
+		"schemaName": "google_geolocation",
+		"uri": "/app/google/geolocation",
+		"entityName": "config"
+	},
+	{
+		"schemaName": "google_place",
+		"uri": "/app/google/place",
+		"entityName": "config"
+	},
+	{
+		"schemaName": "google_reversegeo",
+		"uri": "/app/google/reversegeo",
+		"entityName": "config"
+	},
+	{
+		"schemaName": "google_textsearch",
+		"uri": "/app/google/textsearch",
+		"entityName": "config"
+	},
+	{
+		"schemaName": "hdoc",
+		"uri": "/sop/hdoc",
+		"entityName": "sop_service_hdocs"
+	},
+	{
+		"schemaName": "hdoc_fieldsheet",
+		"uri": "/sop/hdoc/fieldsheet",
+		"entityName": "sop_service_hdoc_versions"
+	},
+	{
+		"schemaName": "hdoc_latest",
+		"uri": "/sop/hdoc/latest",
+		"entityName": "vw_sop_service_hdoc_versions_latest"
+	},
+	{
+		"schemaName": "hdoc_versions",
+		"uri": "/sop/hdoc/versions",
+		"entityName": "vw_sop_service_hdoc_versions"
+	},
+	{
+		"schemaName": "heavensentInRange",
+		"uri": "/sop/heavensentInRange",
+		"entityName": "sop_companies"
+	},
+	{
+		"schemaName": "hsl_addresses",
+		"uri": "/sop/hsl_addresses",
+		"entityName": "hsl_addresses"
+	},
+	{
+		"schemaName": "job",
+		"uri": "/sop/job",
+		"entityName": "sop_service_orders"
+	},
+	{
+		"schemaName": "job_addresses",
+		"uri": "/sop/job/addresses",
+		"entityName": "vw_case_people"
+	},
+	{
+		"schemaName": "job_assignment_addresses",
+		"uri": "/sop/job/assignment/addresses",
+		"entityName": "vw_jobs_assignments_summary"
+	},
+	{
+		"schemaName": "job_assignments",
+		"uri": "/sop/job/assignments",
+		"entityName": "vw_job_assignments"
+	},
+	{
+		"schemaName": "job_documents",
+		"uri": "/sop/job/documents",
+		"entityName": "vw_order_affidavit_summary"
+	},
+	{
+		"schemaName": "location_types",
+		"uri": "/sop/location_types",
+		"entityName": "sop_location_types"
+	},
+	{
+		"schemaName": "order",
+		"uri": "/sop/order",
+		"entityName": "sop_cases"
+	},
+	{
+		"schemaName": "orders",
+		"uri": "/sop/orders",
+		"entityName": "sop_cases"
+	},
+	{
+		"schemaName": "people",
+		"uri": "/sop/people",
+		"entityName": "vw_sop_people"
+	},
+	{
+		"schemaName": "person",
+		"uri": "/sop/person",
+		"entityName": "sop_people"
+	},
+	{
+		"schemaName": "person_address",
+		"uri": "/sop/person_address",
+		"entityName": "j_person_addresses"
+	},
+	{
+		"schemaName": "personas",
+		"uri": "/sop/personas",
+		"entityName": "sop_persona_types"
+	},
+	{
+		"schemaName": "process_servers",
+		"uri": "/sop/process_servers",
+		"entityName": "vw_process_servers"
+	},
+	{
+		"schemaName": "request",
+		"uri": "/sop/request",
+		"entityName": "sop_requests"
+	},
+	{
+		"schemaName": "request_ack",
+		"uri": "/sop/request/ack",
+		"entityName": "vw_email_ack_request"
+	},
+	{
+		"schemaName": "request_document",
+		"uri": "/sop/request/document",
+		"entityName": "sop_request_documents"
+	},
+	{
+		"schemaName": "request_documents",
+		"uri": "/sop/request_documents",
+		"entityName": "sop_request_documents"
+	},
+	{
+		"schemaName": "request_queue",
+		"uri": "/app/request/queue",
+		"entityName": "hsl_request_queue"
+	},
+	{
+		"schemaName": "request_status_types",
+		"uri": "/sop/request_status_types",
+		"entityName": "sop_request_status_types"
+	},
+	{
+		"schemaName": "request_types",
+		"uri": "/sop/request_types",
+		"entityName": "sop_request_types"
+	},
+	{
+		"schemaName": "requests",
+		"uri": "/sop/requests",
+		"entityName": "vw_sop_requests"
+	},
+	{
+		"schemaName": "schemas",
+		"uri": "/app/schemas",
+		"entityName": "noinfopath_dbschema"
+	},
+	{
+		"schemaName": "sendmail",
+		"uri": "/app/sendmail/:type/:id",
+		"entityName": "config"
+	},
+	{
+		"schemaName": "service",
+		"uri": "/sop/service",
+		"entityName": "sop_assignment_services"
+	},
+	{
+		"schemaName": "service_address",
+		"uri": "/sop/service/address",
+		"entityName": "vw_case_people"
+	},
+	{
+		"schemaName": "service_address_documents",
+		"uri": "/sop/service_address_documents",
+		"entityName": "vw_documents_for_addresses"
+	},
+	{
+		"schemaName": "service_addresses",
+		"uri": "/sop/service/addresses",
+		"entityName": "vw_case_people"
+	},
+	{
+		"schemaName": "service_addresses_ui",
+		"uri": "/sop/service/addresses/ui",
+		"entityName": "vw_request_ui_addresses"
+	},
+	{
+		"schemaName": "service_attempt",
+		"uri": "/sop/service/attempt",
+		"entityName": "sop_service_attempts"
+	},
+	{
+		"schemaName": "service_attempt_type",
+		"uri": "/sop/service_attempt_type",
+		"entityName": "sop_service_attempt_type"
+	},
+	{
+		"schemaName": "service_attempts",
+		"uri": "/sop/service/attempts",
+		"entityName": "vw_service_attempts"
+	},
+	{
+		"schemaName": "service_dashboard",
+		"uri": "/sop/service/dashboard",
+		"entityName": "vw_services_dashboard"
+	},
+	{
+		"schemaName": "service_instruction_templates",
+		"uri": "/sop/service/instruction/templates",
+		"entityName": "sop_service_instruction_templates"
+	},
+	{
+		"schemaName": "service_note",
+		"uri": "/sop/service/note",
+		"entityName": "sop_service_notes"
+	},
+	{
+		"schemaName": "service_notes",
+		"uri": "/sop/service/notes",
+		"entityName": "vw_service_notes"
+	},
+	{
+		"schemaName": "service_orders",
+		"uri": "/sop/service_orders",
+		"entityName": "sop_service_orders"
+	},
+	{
+		"schemaName": "service_requests",
+		"uri": "/sop/service_requests",
+		"entityName": "sop_requests"
+	},
+	{
+		"schemaName": "service_status_types",
+		"uri": "/sop/service_status_types",
+		"entityName": "sop_service_status_types"
+	},
+	{
+		"schemaName": "service_summary",
+		"uri": "/sop/service/summary",
+		"entityName": "vw_service_summary"
+	},
+	{
+		"schemaName": "sp",
+		"uri": "/app/sp",
+		"entityName": "test_table"
+	},
+	{
+		"schemaName": "status_feed",
+		"uri": "/app/status/feed",
+		"entityName": "config"
+	},
+	{
+		"schemaName": "test",
+		"uri": "/app/test",
+		"entityName": "test_table"
+	},
+	{
+		"schemaName": "timezones",
+		"uri": "/sop/timezones",
+		"entityName": "timezones"
+	},
+	{
+		"schemaName": "us_states",
+		"uri": "/sop/us_states",
+		"entityName": "us_states"
+	},
+	{
+		"schemaName": "user_signatures",
+		"uri": "/sop/user_signatures",
+		"entityName": "hsl_user_signatures"
+	},
+	{
+		"schemaName": "users",
+		"uri": "/sop/users",
+		"entityName": "hsl_users"
+	},
+	{
+		"schemaName": "users_with_signature",
+		"uri": "/sop/users_with_signature",
+		"entityName": "vw_hsl_users_with_signature"
+	}
+]

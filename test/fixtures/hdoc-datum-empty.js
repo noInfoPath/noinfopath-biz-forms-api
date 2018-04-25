@@ -1,0 +1,22 @@
+module.exports = {
+	sop_case_id: null,
+	sop_order_id: null,
+	sop_service_id: null,
+	order: {},
+	court: {},
+	casePeople: [],
+	plaintiffs: [],
+	defendants: [],
+	witnesses: [],
+	otherPersona: [],
+	case: {},
+	personServed: {},
+	server: {},
+	service: {},
+	requester: {},
+	attempts: [],
+	successful: false,
+	unsuccessful: true,
+	latestAttempt: {},
+	documents: []
+};

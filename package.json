@@ -1,6 +1,6 @@
 {
 	"name": "noinfopath-biz-forms-api",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Server side API for rendering 100% HTML5, content editable forms.",
 	"main": "lib/index.js",
 	"directories": {

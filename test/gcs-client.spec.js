@@ -12,8 +12,7 @@ chai.use(chaiAsPromised);
 chai.should();
 
 describe("Testing GoogleCloudStorageAdaptor", function () {
-
-
+	this.timeout(4000);
 
 	var testHtmlFile, gcsAdaptor, appConfig;
 

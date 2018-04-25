@@ -21,6 +21,8 @@ chai.use(chaiAsPromised);
 chai.should();
 
 describe("Testing HdocFormManager", function () {
+	this.timeout(4000);
+
 	var testHtmlFile, formManager, appConfig;
 
 	before(function () {
